@@ -86,7 +86,7 @@ const AuthScreen = () => {
                                     <img src='/stranger-things-sm.png' alt='image' className='h-full' />
                                 <div className='flex justify-between items-center w-full'>
                                     <div className='flex flex-col gap-0'>
-                                        <span className='text-md lg:text-lg font-hold'>Stranger Things</span>
+                                        <span className='text-md lg:text-lg font-hold'>GLADIATOR</span>
                                         <span className='text-sm text-blue-500'>Downloading...</span>
                                     </div>
 
@@ -153,9 +153,9 @@ const AuthScreen = () => {
                     </div>
                     {/* right */}
                     <div className='flex-1 text-center md:text-left'>
-                        <h2 className='text-4xl md:text-5xl font-extrabold mb-4'>Create profiles for kids</h2>
+                        <h2 className='text-4xl md:text-5xl font-extrabold mb-4'>Kids can have their own profiles for free with your membership.</h2>
                         <p className='text-lg md:text-xl'>
-                            Send kids on adventures with their favorite characters in a space made just for them-free with your membership.
+                            
                         </p>
                     </div>
                 </div>
