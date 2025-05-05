@@ -14,7 +14,7 @@ const AuthScreen = () => {
         <div className='hero-bg relative'>
             <header className='max-w-6xl mx-auto flex items-center justify-between p-4 pb-10'>
                 <img src='/netflix-logo.png' alt='Netflix Logo' className='w-32 md:w-52' />
-                <Link to={'/login'} className='text-white bg-red-600 py-1 px-2 rounded'>
+                <Link to={'/login'} className='text-white bg-green-600 py-1 px-2 rounded'>
                     Sign In
                 </Link>
             </header>
@@ -33,7 +33,7 @@ const AuthScreen = () => {
                         onChange={(e) => setEmail(e.target.value)}
                     />
 
-                    <button className='bg-red-600 text-xl lg:text-2xl px-2 lg:px-6 py-1 md:py-2 rounded flex justify-center items-center' >
+                    <button className='bg-green-600 text-xl lg:text-2xl px-2 lg:px-6 py-1 md:py-2 rounded flex justify-center items-center' >
                         Get Started
                         <ChevronRight className='size-8 md:size-10' />
                     </button>
