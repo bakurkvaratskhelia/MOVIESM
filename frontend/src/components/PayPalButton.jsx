@@ -7,7 +7,7 @@ const PayPalButton = ({ amount, onSuccess }) => {
   useEffect(() => {
     const addPayPalScript = async () => {
       const script = document.createElement("script");
-      script.src = "https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID";
+      script.src = "https://www.paypal.com/sdk/js?client-id=AZ7KHt_WMK2jcpqYaOGJ_nrDCRomaI66T1yNzdAjnF73muDxPz2h8BtITT9r7SSRy1uHaKN6POARjqjT";
       script.async = true;
       script.onload = () => setSdkLoaded(true);
       document.body.appendChild(script);
