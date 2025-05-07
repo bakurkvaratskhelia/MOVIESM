@@ -68,7 +68,7 @@ const HomeScreen = () => {
                 <p>Make a payment using PayPal:</p>
                 <PayPalButton amount={20} onSuccess={handlePaymentSuccess} />
               </div>
-            );
+            
 
             <p className='mt-2 text-lg' >
               {trendingContent?.release_date?.split("-")[0] || 
