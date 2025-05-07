@@ -14,7 +14,7 @@ import { protectRoute } from './middleware/protectRoute.js';
 const app = express();
 const PORT = ENV_VARS.PORT;
 const __dirname = path.resolve();
-const paypal = require('./services/paypal')
+const paypal = require('./services/paypal');
 
 app.use(express.json());
 app.use(cookieParser());
