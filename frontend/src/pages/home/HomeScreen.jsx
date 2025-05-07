@@ -6,20 +6,14 @@ import { useContentStore } from '../../store/content';
 import { MOVIE_CATEGORIES, ORIGINAL_IMG_BASE_URL, TV_CATEGORIES} from "../../utils/constants";
 import MovieSlider from "../../components/MovieSlider";
 import {useState} from "react";
-import React from "react";
-import PayPalButton from "../components/PayPalButton";
+
 
 const HomeScreen = () => {
   const {trendingContent} = useGetTrendingContent();
   const {contentType } = useContentStore();
   const [imgLoading, setImgLoading] = useState(true);
 
-  const handlePaymentSuccess = (paymentDetails) => {
-    console.log("Payment successful:", paymentDetails);
-    alert(`Payment of $${paymentDetails.amount} was successful!`);
-  };
-
-  
+   
 
   if (!trendingContent)
     return ( 
@@ -64,11 +58,7 @@ const HomeScreen = () => {
               {trendingContent?.title || trendingContent?.name}
             </h1>
 
-            <div>
-                <p>Make a payment using PayPal:</p>
-                <PayPalButton amount={20} onSuccess={handlePaymentSuccess} />
-              </div>
-            
+                       
 
             <p className='mt-2 text-lg' >
               {trendingContent?.release_date?.split("-")[0] || 
