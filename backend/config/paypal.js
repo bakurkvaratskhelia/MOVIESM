@@ -1,5 +1,6 @@
 import paypal from '@paypal/checkout-server-sdk';
 
+
 const environment =
     process.env.NODE_ENV === 'production'
         ? new paypal.core.LiveEnvironment(
