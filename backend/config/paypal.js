@@ -1,17 +1,19 @@
-import paypal from '@paypal/checkout-server-sdk';
+const axios = require('axios')
 
+async function generateAccessToken() {
+    const response = await axios({
+        url: process.env.PAYPAL_BASE_URL + '/v1/oauth2/token',
+        method: 'post', 
+        data: 'grant_type=client_credentials',
+        auth: {
+            username: process.env.PAYPAL_CLIENT_ID,
+            password: process.env.PAYPAL_SECRET
+        }
+    })
 
-const environment =
-    process.env.NODE_ENV === 'production'
-        ? new paypal.core.LiveEnvironment(
-              process.env.PAYPAL_CLIENT_ID,
-              process.env.PAYPAL_CLIENT_SECRET
-          )
-        : new paypal.core.SandboxEnvironment(
-              process.env.PAYPAL_SANDBOX_CLIENT_ID,
-              process.env.PAYPAL_SANDBOX_CLIENT_SECRET
-          );
+    console.log(response.data)
+        
+}
 
-const client = new paypal.core.PayPalHttpClient(environment);
-
-export default client;
+generateAccessToken
+    
