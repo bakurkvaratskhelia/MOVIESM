@@ -13,6 +13,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@paypal/checkout-server-sdk": "^1.0.3",
     "axios": "^1.8.1",
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
@@ -20,6 +21,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "MO": "file:",
     "mongoose": "^8.12.0",
     "netflix-clone-2": "file:"
   },
