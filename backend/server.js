@@ -31,6 +31,11 @@ if (ENV_VARS.NODE_ENV === "production") {
     app.get("*", (req, res) => {
         res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
     });
+
+    app.get('/', (req, res) => {
+        res.render('index'); // Render the 'index.ejs' file
+    });
+    
 }
 
 app.listen(PORT, () => {

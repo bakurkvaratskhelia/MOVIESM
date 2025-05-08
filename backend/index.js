@@ -1,15 +1,16 @@
+dotenv.config()
+
+import dotenv from 'dotenv';
 import { ENV_VARS } from './config/envVars.js';
 import { connectDB } from './config/db.js';
+import paypal from './services/paypal.js';
 
 import express from 'express';
+import path from 'path';
+
 
 const app = express();
-const PORT = ENV_VARS.PORT;
-
-
-dotenv.config()
-const express = ('express')
-const paypal = ('./services/paypal')
+const PORT = ENV_VARS.PORT || 5000;
 
 
 
